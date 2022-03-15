@@ -292,7 +292,7 @@ class VulConfig extends TaintTracking::Configuration {
         )
         or
         (
-          cons.getDeclaringType().hasName("ProcessBuilder")
+          cons.getDeclaringType().hasQualifiedName("java.lang", "ProcessBuilder")
           and
           expr.getConstructor() = cons
           and
