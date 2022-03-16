@@ -10,12 +10,16 @@
 - 2022.3.15 [抽象语法树AST的全面解析（二）](https://www.jianshu.com/p/4bd5dc13f35a)
 - 2022.3.15 [抽象语法树AST的全面解析（三）](https://www.jianshu.com/p/68fcbc154c2f)，这篇文章只是简单看了一下。通过这三篇文章了解了一下AST（Java），现在可能还是比较懵，等这学期的编译原理课程学习后以及自己做出一个编译器之后，对于AST已经会有比较清晰的了解和认识。
 - 2022.3.16 [使用codeql挖掘fastjson利用链](https://xz.aliyun.com/t/7482)，学习了一下思路，但是感觉这样的挖掘还是比较简单的，后续自己再进行深入修改。
+- 2022.3.16 [CodeQL学习笔记(一)](https://fynch3r.github.io/CodeQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/)
+- 2022.3.16 [CodeQL学习笔记(二)](https://fynch3r.github.io/CodeQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/)
+- 2022.3.16 
 
 
 
 ## 待学习
 
 1. [从Java反序列化漏洞题看CodeQL数据流](https://www.anquanke.com/post/id/256967)，和反序列化有关，需要学习学习。
+1. [CodeQL学习笔记(四)](https://fynch3r.github.io/CodeQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9B%9B/)
 
 ## 笔记
 
