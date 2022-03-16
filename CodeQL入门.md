@@ -268,6 +268,15 @@ class VulConfig extends TaintTracking::Configuration {
 最后代码如下：
 
 ```sql
+/**
+ * @id test
+ * @name test
+ * @description test
+ * @kind path-problem
+ * @problem.severity warning
+ */
+
+
 import java
 import semmle.code.java.dataflow.FlowSources
 import semmle.code.java.security.QueryInjection
@@ -310,13 +319,30 @@ class VulConfig extends TaintTracking::Configuration {
         exists(ParameterizedType pt| node.getType() = pt and pt.getTypeArgument(0) instanceof NumberType )
       }
 }
+ from VulConfig config, DataFlow::PathNode source, DataFlow::PathNode sink
+ where config.hasFlowPath(source, sink)
+ select source.getNode(), source, sink, "Sink is reached from $@.", source.getNode(), "here"
 
-  from VulConfig config, DataFlow::PathNode source, DataFlow::PathNode sink
-  where config.hasFlowPath(source, sink)
-  select source.getNode(), source, sink, "source"
 ```
 
-![image-20220315144344064](CodeQL入门.assets/image-20220315144344064.png)
+学习了一下原来ql里面的注释也是很重要的，`@kind path-problem`才可以有`alert`并且显示路径，采用的也是QL数据流分析的常规模板：
+
+```java
+class MyConfig extends TaintTracking::Configuration {
+  MyConfig() { this = "MyConfig" }
+
+  override predicate isSource(DataFlow::Node node) { node instanceof MySource }
+
+  override predicate isSink(DataFlow::Node node) { node instanceof MySink }
+}
+
+from MyConfig config, DataFlow::PathNode source, DataFlow::PathNode sink
+where config.hasFlowPath(source, sink)
+select sink.getNode(), source, sink, "Sink is reached from $@.", source.getNode(), "here"
+
+```
+
+![image-20220316141648281](CodeQL入门.assets/image-20220316141648281.png)
 
 ## 参考链接
 
