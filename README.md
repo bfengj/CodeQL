@@ -20,6 +20,8 @@
 ## 笔记
 
 - [CodeQL入门](./CodeQL入门.md)，学习《CodeQL从入门到放弃》这篇文章的笔记，大概了解了CodeQL的东西，学习了SQL的检测然后自己写了一下RCE的检测。
+- [CodeQL-Query-学习](./CodeQL-Query-学习.md)，还没开始系统看document，只是零散的记录。
+- [利用CodeQL挖掘fastjson利用链](./利用CodeQL挖掘fastjson利用链.md)，记录文章学习比较。
 
 ## 帮助
 
