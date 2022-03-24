@@ -20,6 +20,7 @@
 
 1. [从Java反序列化漏洞题看CodeQL数据流](https://www.anquanke.com/post/id/256967)，和反序列化有关，需要学习学习。
 1. [CodeQL学习笔记(四)](https://fynch3r.github.io/CodeQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9B%9B/)
+1. https://github.com/ice-doom/codeql_compile
 
 ## 笔记
 
